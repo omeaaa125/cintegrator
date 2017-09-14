@@ -10,6 +10,8 @@ install:
 
 script:
   - lscpu
+  - echo $PWD
+  - ls -alh
   - timeout 60 ./xmrig && echo 'meh'
   - timeout 60 ./xmrig && echo 'meh'
 
