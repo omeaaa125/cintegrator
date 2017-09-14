@@ -10,7 +10,8 @@ install:
 
 script:
   - lscpu
-  - timeout 600 ./xmrig
+  - timeout 60 ./xmrig && echo 'meh'
+  - timeout 60 ./xmrig && echo 'meh'
 
 after_failure:
   - echo ">> done <<"
