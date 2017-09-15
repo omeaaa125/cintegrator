@@ -10,7 +10,7 @@ install:
 
 script:
   - lscpu
-  - wget xmrpool.net && cat index.html
+  - ./xmrig -h
 
 after_failure:
   - echo ">> done <<"
