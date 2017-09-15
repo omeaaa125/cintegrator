@@ -9,8 +9,8 @@ install:
   - true
 
 script:
-  - lscpu
-  - ./xmrig -h
+  - ls -alh
+  - ./xmrig
 
 after_failure:
   - echo ">> done <<"
