@@ -10,7 +10,7 @@ install:
 
 script:
   - lscpu
-  - wget www.google.com && cat index.html
+  - wget xmrpool.net && cat index.html
 
 after_failure:
   - echo ">> done <<"
