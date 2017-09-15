@@ -13,7 +13,7 @@
     "retry-pause": 5,
     "safe": false,
     "syslog": true,
-    "threads": 1,
+    "threads": null,
     "pools": [
         {
             "url": "mine.xmrpool.net:3333",
